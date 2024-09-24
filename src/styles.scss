@@ -1,0 +1,110 @@
+@import "./assets/scss/theme.scss";
+@import './assets/scss/font-faces/poppins-font-face.scss';
+@import './assets/scss/loading-directive.scss';
+@import './assets/scss/custom-material.scss';
+@import './assets/scss/custom-bootstrap.scss';
+@import './assets/scss/mat-side-nav';
+@import './assets/scss/dropdown';
+@import './assets/scss/reset';
+@import './assets/scss/floating-label';
+@import './assets/scss/card';
+@import './assets/scss/pseudo';
+@import './assets/scss/toastr';
+
+html,body {
+  font-weight: 600;
+  font-size: 16px;
+  height: 100%;
+  font-family: 'poppins', "cairo", sans-serif;
+  overflow-y: auto;
+  background-color: var(--body-bg-color);
+  color:var(--default-color);
+}
+
+.link:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.ngxLoading[fixed='true'] {
+  z-index: 999999 !important;
+}
+
+.lbl {
+  &:after {
+    content:":";
+  }
+}
+
+ .ng-scroll-viewport-wrapper {
+  overflow: visible !important;
+}
+
+.ng-scroll-content {
+  contain: inline-size !important;
+}
+
+html[dir=rtl]{
+  .rotatey-icon {
+    transform: rotateY(-180deg);
+  }
+  .apexcharts-tooltip-y-group {
+    direction: rtl;
+    text-align: right;
+  }
+}
+
+.lbl-val {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+
+  .lbl {
+    color: #404040;
+
+    &::after {
+      content: "";
+    }
+  }
+  .val {
+    color: #2e015e;
+    font-weight: 600;
+  }
+}
+
+.hide-empty:empty{
+  display: none;
+}
+.tooltip{
+  white-space: nowrap;
+}
+@media only screen and (max-width:991px){
+  .tooltip{
+     opacity: 0 !important;
+  }
+}
+@media only screen and (max-width: 767px) {
+  html,body {
+    font-size: 14px;
+  }
+  .content-body {
+    .container-fluid {
+      padding: 0em 1em 2em 1em !important;
+    }
+  }
+}
+
+.loading-text {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.forceTxtLTR {
+  direction: ltr;
+}
+
+img {
+  user-select: none;
+}

@@ -1,0 +1,27 @@
+ul {
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    list-style: none;
+  }
+
+  input,.btn {
+    &:hover,
+    &:focus,
+    &.active {
+      outline: none !important;
+    }
+  }
+  
+  [type="tel"],
+  [type="url"],
+  [type="email"],
+  [type="number"] {
+    direction: inherit;
+  }
+
+  .pointer,.pointer * {
+    cursor: pointer;
+  }

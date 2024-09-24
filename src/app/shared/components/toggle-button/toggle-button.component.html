@@ -1,0 +1,11 @@
+<div class="toggle-button-container" >
+<label class="toggle-button" [ngClass]="divClasses">
+	<input type="checkbox" #input [checked]="checkedStatus" (change)="checkChange($event)">
+	<span class="knob"></span>
+	<span class="on-off-lbl" for="input">
+		<ng-container *ngIf="checkedStatus === true">{{ "general.on" | translate }}</ng-container>
+		<ng-container *ngIf="checkedStatus === false">{{ "general.off" | translate }}</ng-container>
+	</span>
+</label>
+<span class="text" style="user-select: none;cursor: pointer;" for="input" (click)="input.click()">{{text}}</span>
+</div>

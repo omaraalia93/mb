@@ -1,0 +1,15 @@
+<ngx-loading-bar
+  [height]="'5px'"
+  [color]="'#16a0f6'"
+  class="ngxLoading"
+></ngx-loading-bar>
+<ngx-spinner
+  bdColor="rgba(255,255,255,0.8)"
+  size="medium"
+  color="#16a0f6"
+  [fullScreen]="true"
+>
+  {{"general.please_wait" | translate }}
+</ngx-spinner>
+
+<router-outlet></router-outlet>

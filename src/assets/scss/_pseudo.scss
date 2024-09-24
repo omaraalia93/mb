@@ -1,0 +1,53 @@
+::selection {
+    color: var(--dark);
+    background: var(--secondary);
+  }
+  
+  :focus-visible {
+    outline: none;
+  }
+  
+  ::placeholder {
+    color: var(--placeholder-color) !important;
+    opacity: 1; 
+  }
+  
+  ::-ms-input-placeholder { 
+    color: var(--placeholder-color) !important;
+  }
+
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: var(--default-color);
+  transition: background-color 5000s ease-in-out 0s;
+  box-shadow: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button ,
+input[type='number'] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+}
+
+input::-ms-reveal,input::-ms-clear {
+        display: none;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--primary); 
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #877fff; 
+  }

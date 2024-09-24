@@ -1,0 +1,131 @@
+<div class="user-settings-container">
+  <div class="user-info-container">
+    <div class="image-container">
+      <div class="img-edit">
+        <div class="image"></div>
+      </div>
+    </div>
+    <div class="info flex-ellipses">
+      <div class="name fe-data">{{ "Omar A. Alia" }}</div>
+      <div class="email fe-data">{{ "omaraalia016@gmail.com" }}</div>
+    </div>
+  </div>
+
+  <div class="hr my-2"></div>
+
+  <div class="setting pointer" id="btn_navigate_to_profile">
+    <div class="item">
+      <span>
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 17 18"
+          fill="none"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M8.36196 9.13242C6.50896 9.13242 5.00204 7.63702 5.00204 5.7982C5.00204 3.95937 6.50896 2.46397 8.36196 2.46397C10.215 2.46397 11.7219 3.95937 11.7219 5.7982C11.7219 7.63702 10.215 9.13242 8.36196 9.13242ZM11.5186 9.69338C12.8517 8.62893 13.6286 6.90761 13.343 5.02294C13.0112 2.83653 11.1784 1.08693 8.96591 0.831865C5.91258 0.479271 3.32208 2.83824 3.32208 5.7982C3.32208 7.37362 4.05789 8.7773 5.20531 9.69338C2.38633 10.7445 0.32838 13.2127 0.0058272 16.5436C-0.0412112 17.0362 0.346023 17.468 0.844972 17.468C1.27252 17.468 1.63708 17.1479 1.67487 16.7253C2.01171 13.0051 4.88192 10.7995 8.36196 10.7995C11.842 10.7995 14.7122 13.0051 15.049 16.7253C15.0868 17.1479 15.4514 17.468 15.8789 17.468C16.3779 17.468 16.7651 17.0362 16.7181 16.5436C16.3955 13.2127 14.3376 10.7445 11.5186 9.69338Z"
+            fill="currentColor"
+          />
+        </svg>
+      </span>
+      <span>
+        {{ "main.settings.settings" | translate }}
+      </span>
+    </div>
+    <div class="item-control rotatey-icon">
+      <svg width="10" height="10" viewBox="0 0 9 15" fill="none">
+        <path d="M1 1L7 7.5L1 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+    </div>
+  </div>
+
+  <div class="setting">
+    <div class="item">
+      <span>
+        <svg width="20" height="20"  viewBox="0 0 22 26" fill="none">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M3.58226 12.378C3.41895 7.58331 6.89802 3.55064 11.3611 3.36133C15.8242 3.55064 19.3033 7.58331 19.14 12.378C19.14 14.3694 21.1544 16.3095 21.2134 18.3054C21.2134 18.3337 21.2134 18.3618 21.2134 18.3901C21.257 19.6689 20.329 20.7443 19.1386 20.7944H14.6452C14.6494 21.7742 14.3055 22.719 13.6838 23.436C13.086 24.1334 12.2437 24.5302 11.3611 24.5302C10.4785 24.5302 9.63635 24.1334 9.03848 23.436C8.41666 22.719 8.07282 21.7742 8.077 20.7944H3.58226C2.39189 20.7443 1.46375 19.6689 1.50733 18.3901C1.50733 18.3618 1.50733 18.3337 1.50733 18.3054C1.56787 16.3155 3.58226 14.3709 3.58226 12.378Z" stroke="currentColor" stroke-width="1.50173" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8.07649 19.6623C7.47846 19.6623 6.99365 20.1701 6.99365 20.7964C6.99365 21.4227 7.47846 21.9305 8.07649 21.9305V19.6623ZM14.6448 21.9305C15.2428 21.9305 15.7276 21.4227 15.7276 20.7964C15.7276 20.1701 15.2428 19.6623 14.6448 19.6623V21.9305ZM12.7683 2.77206C13.3663 2.77206 13.8511 2.26431 13.8511 1.63798C13.8511 1.01165 13.3663 0.503906 12.7683 0.503906V2.77206ZM9.95292 0.503906C9.35491 0.503906 8.8701 1.01165 8.8701 1.63798C8.8701 2.26431 9.35491 2.77206 9.95292 2.77206V0.503906ZM8.07649 21.9305H14.6448V19.6623H8.07649V21.9305ZM12.7683 0.503906H9.95292V2.77206H12.7683V0.503906Z" fill="currentColor"/>
+          </svg>
+      </span>
+      <span>
+        {{ "main.settings.notifications" | translate }}
+      </span>
+    </div>
+    <div class="item-control">
+      <app-toggle-button [classes]="['thin-style']"></app-toggle-button>
+    </div>
+  </div>
+
+  <div class="setting">
+    <div class="item">
+      <span>
+        <svg  width="20" height="20"  viewBox="0 0 23 23" fill="none">
+          <path d="M22.6985 21.3102L18.7928 10.0674C18.5184 9.32779 17.9045 8.87054 17.1991 8.87054C16.4937 8.87054 15.8929 9.32779 15.5924 10.0943L11.6998 21.3102C11.5169 21.8347 11.7782 22.413 12.2876 22.6013C12.797 22.7896 13.3587 22.5206 13.5416 21.9961L14.3515 19.6696H20.0337L20.8436 21.9961C20.9873 22.413 21.3661 22.6685 21.771 22.6685C21.8755 22.6685 21.9931 22.6551 22.0976 22.6147C22.607 22.4265 22.8683 21.8482 22.6854 21.3237L22.6985 21.3102ZM15.0699 17.6389L17.2122 11.4661L19.3545 17.6389H15.0699ZM11.739 5.81777C8.78681 10.6188 6.12206 13.5237 2.88254 15.4602C2.72579 15.5544 2.55598 15.5947 2.39922 15.5947C2.0596 15.5947 1.73303 15.4199 1.55016 15.0971C1.27584 14.613 1.43259 13.9944 1.90285 13.7254C4.64597 12.0847 6.89275 9.73124 9.41383 5.83122H1.19747C0.661901 5.83122 0.217773 5.37398 0.217773 4.8226C0.217773 4.27121 0.661901 3.81397 1.19747 3.81397H6.09593V1.1512C6.09593 0.599821 6.54006 0.142578 7.07563 0.142578C7.61118 0.142578 8.05532 0.599821 8.05532 1.1512V3.81397H12.9538C13.4894 3.81397 13.9335 4.27121 13.9335 4.8226C13.9335 5.37398 13.4894 5.83122 12.9538 5.83122H11.7259L11.739 5.81777ZM11.7912 15.5947C11.6214 15.5947 11.4516 15.5544 11.2948 15.4602C10.4458 14.9492 9.62283 14.3844 8.85213 13.7926C8.42106 13.4564 8.32964 12.8244 8.6562 12.3806C8.98276 11.9368 9.59671 11.8426 10.0278 12.1788C10.7332 12.7302 11.5038 13.2413 12.2876 13.7119C12.7578 13.9944 12.9146 14.613 12.6403 15.0971C12.4574 15.4199 12.1308 15.5947 11.7912 15.5947Z" fill="currentColor"/>
+          </svg>      
+        </span>
+      <span>
+        {{ "main.settings.language" | translate }}
+      </span>
+    </div>
+    <div class="item-control">
+      <button mat-button [matMenuTriggerFor]="menu" class="btn-lang-opener">
+        <img [src]="currentLangIcon" alt="" />
+        <span>{{ defaultLang }}</span>
+        <svg
+          width="20" height="20" 
+          viewBox="0 0 18 11"
+          fill="none"
+        >
+          <path
+            d="M1.55078 1.7207L9.05943 9.22935L16.5681 1.7207"
+            stroke="#0C1745"
+            stroke-width="2.2526"
+            stroke-linecap="round"
+          />
+        </svg>
+      </button>
+      <mat-menu #menu="matMenu" xPosition="before">
+        <ng-container
+          *ngFor="let language of languages; trackBy: trackByLanguage"
+        >
+          <button
+            mat-menu-item
+            (click)="handleLanguageSelect(language)"
+            class="btn-lang"
+          >
+            <img [src]="language.icon" alt="" />
+            <span>{{ language.name }}</span>
+          </button>
+        </ng-container>
+      </mat-menu>
+    </div>
+  </div>
+
+  <div class="hr my-2"></div>
+
+  <div class="setting pointer" (click)="logout()" id="btn_profile_logout">
+    <div class="item">
+      <span>
+        <svg width="20" height="20" viewBox="0 0 18 19" fill="none">
+          <path d="M9 12.6016L12 9.60156M12 9.60156L9 6.60156M12 9.60156H1M6 4.85015V4.80176C6 3.68165 6 3.12118 6.21799 2.69336C6.40973 2.31703 6.71547 2.01129 7.0918 1.81955C7.5196 1.60156 8.0801 1.60156 9.2002 1.60156H13.8002C14.9203 1.60156 15.4796 1.60156 15.9074 1.81955C16.2837 2.01129 16.5905 2.31703 16.7822 2.69336C17 3.12076 17 3.68055 17 4.79847V14.4052C17 15.5231 17 16.0821 16.7822 16.5095C16.5905 16.8858 16.2837 17.1921 15.9074 17.3838C15.48 17.6016 14.921 17.6016 13.8031 17.6016H9.1969C8.079 17.6016 7.5192 17.6016 7.0918 17.3838C6.71547 17.1921 6.40973 16.8855 6.21799 16.5092C6 16.0814 6 15.5217 6 14.4016V14.3516" stroke="currentColor" stroke-width="1.28" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>      </span>
+      <span>
+        {{ "main.settings.logout" | translate }}
+      </span>
+    </div>
+  </div>
+</div>
+
+<app-action-modal
+  *ngIf="confirmLogoutModalOpen"
+  [size]="'sm'"
+  [type]="'confirm'"
+  [state]="'danger'"
+  [title]="'main.settings.logout'"
+  [desc]="'main.settings.logout_desc'"
+  (submitModal)="submitConfirmModal()"
+  (closeModal)="closeConfirmModal()"
+>
+</app-action-modal>

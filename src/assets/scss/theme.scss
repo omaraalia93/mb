@@ -1,0 +1,55 @@
+:root {
+  --primary: #16a0f6;
+  --secondary: #f5c042;
+  --tertiary: #f94343;
+  --success: #1faf66;
+  --info: #461ee7;
+  --warning: #fe8024;
+  --danger: #f94343;
+  --light: #f4f5f9;
+  --dark: #262626;
+  --lightGrey: #d8d8d8;
+  --darkGrey: #7d7d7d;
+  --grey: #959494;
+  --page-title-color: var(--primary);
+  --body-bg-color: #f9f9f9;
+  --default-color: #000;
+  --card-bg-color: #ffffff;
+  --border-color: #c7c7c7;
+  --secondary-to-white: var(--secondary);
+  --placeholder-color: #b8b8b8;
+  --custom-label-color: #fff;
+  --nav-headbg: var(--body-bg-color);
+  
+  --sidebar-bg-color: #ffffff;
+  --sidebar-txt-color:#595959;
+  --sidebar-txt-color-hover:var(--primary);
+  --sidebar-txt-color-active:var(--primary);
+
+  --mat-sidenav-content-background-color: var(--body-bg-color);
+  --auth-form-bg-color: #fff;
+  --dd-active-danger: var(--danger);
+  --dd-active-bg-color: #e8e8e8;
+  --dd-normal-control-bg-color: #fafafa;
+  --float-label-color: #949494;
+
+  --input-group-search-bg-color: #fafafa;
+  --input-group-search-border-color: #fafafa;
+
+  --modal-bg-color: #fff;
+  --card-dbg-color:#fff;
+  --bs-dropdown-link-color: var(--secondary-to-white);
+
+  --custom-input-border-color:#c7c7c7;
+  --dropdown-link-disabled-color:#ccc;
+
+  --bs-dropdown-link-hover-bg:#ebf7ff;
+  --dd-active-bg-color:#9fdaff;
+
+
+  --stock-card-bg-color-default:#1ece6d;
+  --stock-card-bg-color-plus:#1ece6d;;
+  --stock-card-bg-color-minus:#e94b35;
+  --stock-card-bg-color-disabled:#ecf0f1;
+  --stock-card-color:#33495f;
+}

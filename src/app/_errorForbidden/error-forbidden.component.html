@@ -1,0 +1,27 @@
+<div class="authincation vh-100">
+  <div class="container h-100">
+    <div class="row justify-content-center h-100 align-items-center">
+      <div class="col-md-8">
+        <div class="form-input-content text-center error-page">
+          <h1 class="error-text font-weight-bold">
+            <div class="lottie-container">
+              <ng-lottie containerClass="w-lg-50 m-auto" [options]="forbidden"></ng-lottie>
+            </div>
+            {{ 'error_forbidden.forbidden' | translate }}</h1>
+          <h4>
+            {{ 'error_forbidden.title' | translate }}
+          </h4>
+          <p>{{ 'error_forbidden.description' | translate }}</p>
+          <div>
+            <a class="btn btn-primary btn-md btnn" (click)="navigateToDashboard()">
+            <i class="fa fa-arrow-left rotatey-icon"></i>
+            <span>
+              {{ 'error_forbidden.button' | translate }}
+            </span>
+             </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

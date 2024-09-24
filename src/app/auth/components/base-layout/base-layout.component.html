@@ -1,0 +1,42 @@
+<div class="auth-container">
+  <div class="change-lang-container">
+    <div class="mob-logo">
+      <img src="../../../../assets/images/logos/logo.svg" />
+    </div>
+
+    <div ngbDropdown class="dd-lang">
+      <button class="btn btn-outline-primary bg-white p-2 dropdown-no-icon rounded-5" id="dropdownBasic1" ngbDropdownToggle>
+        <svg xmlns="http://www.w3.org/2000/svg" width="28px" height="28px" viewBox="0 0 24 24" role="img" aria-labelledby="languageIconTitle" stroke="#16a0f6" stroke-width="1" stroke-linejoin="miter" fill="none" color="#16a0f6">
+          <title id="languageIconTitle">Language</title>
+          <circle cx="12" cy="12" r="10"></circle>
+          <path stroke-linecap="round" d="M12,22 C14.6666667,19.5757576 16,16.2424242 16,12 C16,7.75757576 14.6666667,4.42424242 12,2 C9.33333333,4.42424242 8,7.75757576 8,12 C8,16.2424242 9.33333333,19.5757576 12,22 Z"></path>
+          <path stroke-linecap="round" d="M2.5 9L21.5 9M2.5 15L21.5 15"></path>
+        </svg>
+      </button>
+
+      <div ngbDropdownMenu>
+        <ul class="languages" [appActiveList]="defaultLangIndex">
+          <ng-container
+            *ngFor="let language of languages; trackBy: trackByLanguage"
+          >
+            <li
+              ngbDropdownItem
+              (click)="handleLanguageSelect(language)"
+              class="pointer"
+            >
+              {{ language.name }}
+            </li>
+          </ng-container>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="auth-form">
+    <div class="auth-body">
+      <ng-content select="[body]"></ng-content>
+    </div>
+    <div class="copy-rights text-center mt-3">
+      {{ "general.copyrights" | translate : { year: currentYear } }}
+    </div>
+  </div>
+</div>

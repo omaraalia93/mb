@@ -1,0 +1,87 @@
+<app-base-layout>
+  <ng-container body>
+    <div class="form-box-container">
+      <div class="form-box">
+        <div class="form-header">
+
+          <div class="fh-side form-side">
+            <div class="form-title">
+              {{ 'auth.login.title' | translate }}
+            </div>
+            <div class="form-sub-title">
+              <span> {{ 'auth.welcome_to' | translate }} </span
+              ><span class="text-primary text-capitalize">
+                {{ 'core.project_name' | translate }}
+              </span>
+            </div>
+          </div>
+          <div class="fh-side logo">
+          <img src="../../../../assets/images/logos/logo.svg">
+          </div>
+          
+        </div>
+        <div class="form-body">
+          <form [formGroup]="form">
+            <div class="row">
+              <div class="col-12">
+                <app-floating-label-input
+                  [type]="'email'"
+                  [label]="'auth.login.email' | translate"
+                  formControlName="email"
+                  [hasError]="
+                    form.get('email').errors && form.get('email').touched
+                  "
+                ></app-floating-label-input>
+              <app-form-error [control]="form.get('email')"></app-form-error>
+            </div>
+          </div>
+
+            <div class="row">
+              <div class="col-12">
+                <app-floating-label-input
+                  #inputPassword
+                  [type]="'password'"
+                  [allowDecimal]="false"
+                  [label]="'auth.login.password' | translate"
+                  formControlName="password"
+                  [append]="true"
+                  [hasError]="form.get('password').errors && form.get('password').touched"
+                >
+                  <div append>
+                    <div class="append-prepend-container">
+                      <i
+                      (click)="toggleEyeIcon(inputPassword)"
+                        class="fa pointer"
+                        [ngClass]="{
+                          'fa-eye-slash': toggleEye,
+                          'fa-eye': !toggleEye
+                        }"
+                      ></i>
+                  </div>
+                  </div>
+                </app-floating-label-input>
+                <app-form-error
+                [control]="form.get('password')"
+              ></app-form-error>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+              <button
+                type="submit"
+                [disabled]="form.invalid || inProgress"
+                (click)="signin()"
+                id="btn_login"
+                class="btn btn-primary btn-md text-light w-100"
+              >
+                {{ 'auth.login.submit' | inProgress : inProgress | translate }}
+              </button>
+            </div>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</app-base-layout>

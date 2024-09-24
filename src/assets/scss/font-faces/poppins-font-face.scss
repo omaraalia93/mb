@@ -1,0 +1,31 @@
+/* Define the font face for regular weight */
+@font-face {
+    font-family: "poppins";
+    src: url('../../fonts/poppins/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /* Define the font face for bold weight */
+  @font-face {
+    font-family: 'poppins';
+    src: url('../../fonts/poppins/Poppins-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  /* Define the font face for light weight */
+  @font-face {
+    font-family: 'poppins';
+    src: url('../../fonts/poppins/Poppins-Light.ttf') format('truetype');
+    font-weight: 300; /* Adjust the font weight value if needed */
+    font-style: normal;
+  }
+  
+  /* Define the font face for semi-bold weight */
+  @font-face {
+    font-family: 'poppins';
+    src: url('../../fonts/poppins/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: 600; /* Adjust the font weight value if needed */
+    font-style: normal;
+  }

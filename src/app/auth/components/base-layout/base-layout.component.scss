@@ -1,0 +1,141 @@
+
+.auth-container{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: url(../../../../assets/images/bg.jpg) no-repeat;
+  background-size: cover;
+
+  .auth-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  .auth-body {
+    width: 500px;
+
+    @media screen and (max-width:600px) {
+      width: 90%;
+    }
+  }
+
+  .copy-rights {
+    color: var(--text);
+    font-size: 0.8rem;
+  }
+}
+.change-lang-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1.8em 2em 1em 2em;
+  gap:1rem;
+}
+
+
+.mob-logo {
+  display: none;
+  align-items: center;
+  flex-grow: 1;
+  img {
+    width: 110px;
+  }
+  @media screen and (max-width:600px) {
+    display: flex;
+  }
+}
+
+::ng-deep{
+  .form-box-container {
+    .form-box {
+      background: var(--auth-form-bg-color);
+      width: 100%;
+      border-radius: 1.6em;
+      padding: 1.8rem;
+      z-index: 1;
+      max-width: 540px;
+      box-shadow: 0px 2px 30px -15px #919191;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+
+      .form-header {
+        display: flex;
+        align-items: center;
+
+        .fh-side.form-side {
+          flex-grow: 1;
+        }
+
+        .fh-side.logo {
+            display: flex;
+            justify-content: end;
+            align-self: flex-start;
+            @media screen and (max-width:600px) {
+              display: none;
+            }
+        }
+
+
+        .form-title {
+          text-transform: capitalize;
+          font-size: 2rem;
+          font-weight: 700;
+          display: flex;
+        }
+        .form-sub-title {
+          display: flex;
+          gap: 0.2em;
+
+          & > span:nth-child(1){font-weight: 500;}
+          & > span:nth-child(2){font-weight: 600;}
+        }
+      }
+
+      .form-body {
+        padding-top: 1.6em;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+
+        form {
+          display: flex;
+          flex-direction: column;
+          gap:1em;
+          flex-grow: 1;
+
+          .form-group {
+            margin-bottom: 0;
+          }
+        }
+
+        .button {
+          margin-top: auto;
+          padding-top: 1em;
+        }
+      }
+    }
+  }
+
+  app-floating-label-input {
+      --custom-label-color:var(--auth-form-bg-color);
+  }
+
+  .ig-flag {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8em;
+      font-weight: 600;
+      img {
+          width: 20px;
+          height: auto;
+      }
+      span {
+        line-height: 100%;
+      }
+  }
+
+}

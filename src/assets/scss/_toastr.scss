@@ -1,0 +1,31 @@
+.toast-container {
+  bottom:auto;
+  right: auto;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+
+ .ngx-toastr {
+      min-width: 300px;
+      max-width: 700px;
+      width: auto !important;
+  }
+}
+
+  html[dir=rtl]{
+    .toast-container {
+      .ngx-toastr {
+        padding: 15px 50px 15px 15px;
+        background-position: calc(100% - 15px) center;
+      }
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .toast-container {
+      width: 94%;
+      .ngx-toastr {
+          min-width: 0;
+      }
+    }
+  }

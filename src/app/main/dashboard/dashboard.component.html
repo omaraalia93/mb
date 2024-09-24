@@ -1,0 +1,28 @@
+<app-card
+  [title]="'main.dashboard.mock_stocks' | translate"
+  [icon]="'assignment'"
+>
+  <div class="stock-dashboard">
+    <ng-container *ngFor="let stock of mockStocks">
+      <app-stock-card
+        [stock]="stock"
+        (isChecked)="toggleStock($event)"
+      ></app-stock-card>
+    </ng-container>
+  </div>
+</app-card>
+
+<!-- <app-card
+  class="mt-3"
+  [title]="'main.dashboard.realtime_stocks' | translate"
+  [icon]="'assignment'"
+>
+  <div class="stock-dashboard">
+    <ng-container *ngFor="let stock of stockData">
+      <app-stock-card
+        [stock]="stock"
+        (isChecked)="toggleStock($event)"
+      ></app-stock-card>
+    </ng-container>
+  </div>
+</app-card> -->

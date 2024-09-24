@@ -1,0 +1,45 @@
+<div
+    class="position-relative"
+    [ngClass]="inputClasses"
+    [class.has-placeholder]="isPlaceholder"
+    [class.active]="value || value === 0 || isInputFocused"
+    [class.hasError]="hasError"
+    [class.prepend]="prepend"
+    [class.append]="append"
+    [class.disabled]="isDisabled"
+  >
+    <div class="input-group">
+      <div class="input-group-prepend" *ngIf="prepend">
+        <span class="input-group-text">
+          <ng-content select="[prepend]"></ng-content>
+        </span>
+      </div>
+      <div class="input-label">
+        <input
+          [id]="generatedId"
+          [type]="type"
+          [value]="value"
+          [maxLength]="textMaxLength"
+          [disabled]="isDisabled"
+          [attr.formControlName]="formControlName"
+          [appNumberOnly]="appNumberOnly"
+          [allowDecimal]="allowDecimal"
+          [preventFirstZero]="preventFirstZero"
+          [autocomplete]="autocomplete"
+          [placeholder]="placeholder"
+          (input)="updateValue($event)"
+          (focus)="onInputFocus()"
+          (blur)="onTouched(); onInputBlur()"
+          class="form-control custom-input"
+        />
+        <label class="custom-label" [for]="generatedId"  *ngIf="!isPlaceholder">{{ label  }}</label>
+        <label class="custom-label" [for]="generatedId" *ngIf="isPlaceholder">{{ label | placeholder }}</label>
+      </div>
+      <div class="input-group-append" *ngIf="append">
+        <span class="input-group-text">
+          <ng-content select="[append]"></ng-content>
+        </span>
+      </div>
+    </div>
+  </div>
+

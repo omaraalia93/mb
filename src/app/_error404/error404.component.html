@@ -1,0 +1,27 @@
+<div class="authincation vh-100">
+  <div class="container h-100">
+    <div class="row justify-content-center h-100 align-items-center">
+      <div class="col-md-8">
+        <div class="form-input-content text-center error-page">
+          <div class="error-text font-weight-bold">
+            <div class="lottie-container">
+              <ng-lottie containerClass="w-lg-50 m-auto" [options]="notfound"></ng-lottie>
+            </div>
+          </div>
+          <h4>
+            {{ 'error_404.title' | translate }}
+          </h4>
+          <p>{{ 'error_404.description' | translate }}</p>
+          <div>
+            <a class="btn btn-primary btn-md btnn" (click)="navigateToDashboard()">
+            <i class="fa fa-arrow-left rotatey-icon"></i>
+            <span>
+              {{ 'error_404.button' | translate }}
+            </span>
+             </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

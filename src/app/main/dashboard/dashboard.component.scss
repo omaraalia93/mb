@@ -1,0 +1,16 @@
+
+.stock-dashboard {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.stock-dashboard > app-stock-card {
+  flex: 0 0 100%;
+}
+
+@media screen and (min-width:611px) { 
+  .stock-dashboard > app-stock-card {
+    flex: 0 0 250px;
+  }
+}

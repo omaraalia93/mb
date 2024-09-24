@@ -1,0 +1,13 @@
+<div class="card-container" [ngClass]="divClasses" #cardContainer>
+    <div class="card-header" *ngIf="title" >
+        <div class="card-title-icon material-symbols-outlined">{{icon}}</div>
+        <div class="card-title-text">
+            {{title}}
+        </div>
+    </div>
+    <div class="card-view">
+        <div class="card-body">
+            <ng-content></ng-content>
+        </div>
+    </div>
+</div>

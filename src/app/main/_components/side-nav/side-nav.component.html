@@ -1,0 +1,72 @@
+<mat-sidenav-container [dir]="dir" autosize [class.collapsed]="isCollapsed">
+  <mat-sidenav [position]="'start'"
+               [mode]="isMobile ? 'over' : 'side'" [opened]="isMobile ? 'false' : 'true'">
+    <div class="logo-menu">
+
+
+      <img *ngIf="isCollapsed" src="/assets/images/logos/logo-icon.png" style="user-select: none;cursor: pointer;" (click)="logoClick()"/>
+      <img *ngIf="!isCollapsed" src="/assets/images/logos/logo.svg" style="user-select: none;cursor: pointer;" (click)="logoClick()"/>
+
+      <div [ngClass]="{ 'is-active': isCollapsed }" class="side-nav-btn" (click)="toggleMenu()"
+           [ngbTooltip]="isCollapsed ? ('general.open_menu' | translate)  :  ('general.close_menu' | translate)">
+        <img src="/assets/images/svg/toggle-arr-menu.svg" class="svg"/>
+      </div>
+    </div>
+
+    <ng-scrollbar appearance="compact" direction="dir">
+      <mat-nav-list>
+        <ng-container *ngFor="let menuItem of menuItems; let i = index">
+
+          <ng-container>
+            <div>
+              <a *ngIf="!menuItem.children" placement="end" [class.last-item]="i === menuItems.length - 1"
+                 [disabled]="!menuItem.enabled"
+                 [ngbTooltip]="isCollapsed ? (menuItem.itemName | translate) :''" class="nav-item" mat-list-item
+                 (click)="openExpansionPanel(-1)" [routerLink]="menuItem.enabled ? menuItem.route : null"
+                 [routerLinkActive]="'active'">
+              <span class="entry">
+                <span class="icon" [innerHTML]="menuItem.icon | menuIcons | safe:'html'"></span>
+                <span *ngIf="!isCollapsed">{{ menuItem.itemName | translate }}</span>
+              </span>
+              </a>
+            </div>
+          </ng-container>
+
+          <ng-container>
+            <mat-expansion-panel [class.last-panel]="i === menuItems.length - 1" placement="end"
+                                 [ngbTooltip]="isCollapsed ? (menuItem.itemName | translate):''"
+                                 (click)="openMenu()" [expanded]="openedExpansionPanelId == i || menuItem.isActive"
+                                 (opened)="openExpansionPanel(i)" *ngIf="menuItem.children">
+              <mat-expansion-panel-header [ngClass]="{ 'active': menuItem.isActive }">
+                <a mat-list-item [ngClass]="{ 'active': menuItem.isActive }" [disabled]="!menuItem.enabled">
+                  <span class="entry">
+                    <span class="icon" [innerHTML]="menuItem.icon | menuIcons | safe:'html'"></span>
+                    <span *ngIf="!isCollapsed">{{ menuItem.itemName | translate }}</span>
+                  </span>
+                </a>
+              </mat-expansion-panel-header>
+
+              <mat-nav-list *ngIf="!isCollapsed">
+                <ng-container *ngFor="let childItem of menuItem.children;let j = index">
+                  <ng-container>
+                    <a [class.last-panel-item]="j === menuItem.children.length  - 1" mat-list-item
+                       [routerLink]="childItem.enabled ? childItem.route : null" [disabled]="!childItem.enabled"
+                       [routerLinkActive]="'active'">
+                      <span class="entry">
+                        <span>{{ childItem.itemName | translate }}</span>
+                      </span>
+                    </a>
+                  </ng-container>
+                </ng-container>
+              </mat-nav-list>
+            </mat-expansion-panel>
+          </ng-container>
+
+        </ng-container>
+      </mat-nav-list>
+    </ng-scrollbar>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

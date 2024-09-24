@@ -1,0 +1,14 @@
+<div class="modal-overlay">
+    <div class="my-modal" [class]="size" [class.form-grow]="formGrow">
+        
+        <div class="my-modal-container">
+            <div class="my-modal-content">
+                <ng-content select="[body]"></ng-content>
+            </div>
+            <div class="my-modal-footer">
+                <ng-content select="[footer]"></ng-content>
+              </div>
+        </div>
+    </div>
+</div>
+

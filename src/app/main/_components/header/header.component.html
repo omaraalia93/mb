@@ -1,0 +1,30 @@
+<div class="header">
+  <div class="header-content">
+    <nav class="navbar navbar-expand">
+      <div class="collapse navbar-collapse justify-content-between">
+        <button class="btn btn-clear menu-toggle p-0 text-primary" type="button" (click)="toggleButton()">
+          <svg xmlns="http://www.w3.org/2000/svg" class="stroke secondary" width="22" height="13"
+               viewBox="0 0 22 13" fill="currentColor">
+            <path d="M2 1.66016H20M2 6.66016H20M2 11.6602H20" stroke-width="2.41667" stroke-linecap="round"
+                  stroke="currentColor" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="header-left page-title">
+          {{ pageTitle | translate }}
+        </div>
+        <ul class="navbar-nav header-right ">
+          <li [ngbTooltip]="'main.settings.settings' | translate"
+              class="nav-item dropdown header-profile dropdown-no-icon" ngbDropdown #profileDD="ngbDropdown">
+            <a id="ddl_profile" class="nav-link" href="javascript:void(0)" role="button" data-toggle="dropdown"
+               ngbDropdownToggle>
+              <img src="/assets/images/profile/default-user.jpg" width="20" alt=""/>
+            </a>
+            <div class="dropdown-menu dd-profile fw dropdown-menu-right my-card p-4" ngbDropdownMenu>
+              <app-user-settings  (clicked)="profileDD.close()"></app-user-settings>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+   <div  class="stock-card" 
+   [ngClass]="{ 'plus': stock?.price > 0, 'minus': stock?.price <= 0,'disabled': !stock?.enabled }"
+   >
+      <div class="stock-item symbol">{{stock?.symbol}}</div>
+      <div class="stock-item current-price">{{stock?.price | unit}}</div>
+
+      <div class="stock-item high-low">
+        <div class="high-low-lbl">{{"stock_card.daily" | translate}}</div>
+        <div class="high-low-content">
+          <div class="high">
+            <span class="material-symbols-outlined">keyboard_double_arrow_up</span>
+            <span>{{stock?.dailyHigh | unit}}</span>
+          </div>
+          <div class="low">
+            <span class="material-symbols-outlined">keyboard_double_arrow_down</span>
+            <span>{{stock?.dailyLow | unit}}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="stock-item high-low weeks">
+        <div class="high-low-lbl">{{"stock_card.week_52" | translate}}</div>
+        <div class="high-low-content">
+          <div class="high">
+            <span class="material-symbols-outlined">keyboard_double_arrow_up</span>
+            <span>{{stock?.week52High | unit}}</span>
+          </div>
+          <div class="low">
+            <span class="material-symbols-outlined">keyboard_double_arrow_down</span>
+            <span>{{stock?.week52Low | unit}}</span>
+          </div>
+        </div>
+      </div>
+      <div class="stock-item toggle">
+        <app-toggle-button [classes]="['on-off']"  (isChecked)="checkChange($event)" [checkedStatus]="stock.enabled" ></app-toggle-button>
+      </div>
+   </div>

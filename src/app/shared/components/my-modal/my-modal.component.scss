@@ -1,0 +1,144 @@
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    z-index: 99999;
+    overflow-y: auto;
+    align-items: center;
+    justify-content: center;
+    perspective-origin: center;
+    perspective: 1000px;
+    padding: 1em 0;
+    
+    .my-modal {
+        width: 70%;
+        background: var(--modal-bg-color);
+        min-height: 90vh;
+        border-radius: 1em;
+        display: flex;
+        align-items: center;
+        margin: auto;
+        animation:modalAnimation 0.6s;
+        min-width: 500px;
+        
+        &.xmd {
+            width: 50%;
+            min-height: 60vh;
+            .my-modal-container {
+                min-height: 60vh;
+            }
+        }
+        
+        &.md {
+            width: 40%;
+            min-height: 60vh;
+            .my-modal-container {
+                min-height: 60vh;
+            }
+        }
+    
+        &.sm {
+            width: 26%;
+            min-height: 40vh;
+            .my-modal-container {
+                min-height: 40vh;
+            }
+        }
+        &.auto {
+            min-height: auto;
+            .my-modal-container {
+                min-height: auto;
+            }
+        }
+        
+        .my-modal-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2em;
+            min-height: 90vh;
+            width: 100%;
+            padding: 1.6em;
+        
+            .my-modal-content {
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+                align-items: center;
+                justify-content: center;
+                gap: 2em;
+                width:100%;
+            }
+        
+            .my-modal-footer {
+                width: 100%;
+                display: flex;
+                gap: 1em;
+                justify-content: center;
+                
+                ::ng-deep button {
+                    flex: 1 !important;
+                }
+            }
+        }
+    }
+}
+
+.form-grow {
+    .my-modal-content {
+        flex-grow: 0 !important;
+    }
+    .my-modal-footer {
+        margin-top: auto !important;
+    }
+}
+
+@media screen and (min-width: 2400px) {
+    .modal-overlay {
+        .my-modal {
+            // width: 80% !important;
+            max-width: 1400px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .modal-overlay {
+        .my-modal {
+            width: 80% !important;
+            min-width: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .modal-overlay {
+        .my-modal {
+            width: 94% !important;
+            // min-height: 98vh !important;
+            padding: 1em 0;
+        }
+    }
+    .my-modal-container {
+        padding: 1em !important;
+
+        .my-modal-footer {
+            width: 100%;
+            flex-flow: column-reverse;
+        }
+      }
+}
+
+
+@keyframes modalAnimation {
+    0% {
+        transform: translateZ(-1000px);
+    }
+    50% {
+        transform: translateZ(100px);
+    }
+    100% {
+        transform: translateZ(0);
+    }
+  }

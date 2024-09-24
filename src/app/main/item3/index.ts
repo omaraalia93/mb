@@ -1,0 +1,1 @@
+export * from './item3.component';

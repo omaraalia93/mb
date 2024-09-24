@@ -1,0 +1,166 @@
+.cursor-pointer {
+    cursor: pointer;
+  }
+  .btn {
+    text-transform: capitalize;
+  }
+  .nav-link {
+    svg * {
+      stroke: var(--default-color);
+    }
+  }
+  
+  .nav-link:hover {
+    svg * {
+      stroke: var(--primary);
+    }
+  }
+  
+  .btn:disabled {
+    background-color: #949494 !important;
+    border-color: #949494 !important;
+    color: #1d1d1d !important;
+  }
+  .btn-link:disabled,
+  .btn-link.disabled {
+    color: #6c757d !important;
+  }
+  
+  .row > * {
+    position: relative;
+  }
+  
+  .input-group-text {
+    color: var(--primary);
+
+    img {
+      max-height:20px ;
+    }
+  }
+  .btn-primary {
+    color: #fff;
+    &:hover,
+    &:focus,
+    &:active {
+      color: #fff !important;
+    }
+  }
+  
+  .my-card {
+    border-radius: 1em !important;
+    border: 1px solid !important;
+    border-color: #15225633 transparent transparent #15225633 !important;
+    box-shadow: 0px 0px 14px 1px #ededed !important;
+  
+    &.white {
+      background: white !important;
+    }
+  
+    &.dbg {
+        background: var(--card-dbg-color);
+    }
+  }
+  
+  .form-control {
+    height: 34px;
+    background: inherit !important;
+    color: inherit;
+    font-size: 0.9rem;
+    @media only screen and (max-width: 991px) {
+      height: 41px;
+    }
+    &:hover,
+    &:focus,
+    &.active {
+      box-shadow: none;
+    }
+  }
+  
+  .form-control:focus {
+    color: inherit;
+  }
+  
+  .input-group-append,
+  .input-group-prepend {
+    .input-group-text {
+      height: 100%;
+    }
+  }
+  .input-group-text {
+    background-color: inherit;
+  }
+  
+  
+  .input-group-search {
+    .form-control,
+    .input-group-text {
+      background: var(--input-group-search-bg-color) !important;
+      border-color: var(--input-group-search-border-color) !important;
+    }
+  }
+  
+  .input-group-search.ddl-search {
+    .form-control,
+    .input-group-text {
+      background: var(--input-group-search-bg-color) !important;
+      border-color: var(--input-group-search-border-color) !important;
+    }
+  }
+  .tooltip {
+    --bs-tooltip-bg: var(--secondary);
+    --bs-tooltip-color: #333;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-family: inherit;
+  }
+  
+  .form-check {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 0.6em;
+    align-items: center;
+  
+    input {
+      margin: 0 !important;
+      padding: 0px;
+    }
+  
+  }
+  
+  .form-check {
+    input {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  .form-check-label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+  }
+  .input-group-text {
+    font-size: 0.9rem;
+  }
+
+  .form-group {
+    margin-bottom: 0.7rem;
+  }
+  .disabled  .input-group-text {
+    color: #5a5a5a;
+  }
+  
+  @media screen and (max-width:991px) {
+    .form-check {
+      input {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+
+.dropdown-menu {
+  --bs-dropdown-link-hover-bg: #877fff2b;
+}

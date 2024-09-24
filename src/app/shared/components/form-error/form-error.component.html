@@ -1,0 +1,89 @@
+<div *ngIf="control && control.invalid && (control.dirty || control.touched)"  class="error-content">
+  <div *ngIf="control.hasError('required')" class="text-danger">
+    {{ 'validations.required' | translate }}
+  </div>
+  <div *ngIf="control.hasError('minlength')" class="text-danger">
+    {{ 'validations.min_length' | translate : { minLength: control.getError('minlength').requiredLength } }}
+  </div>
+  <div *ngIf="control.hasError('maxlength')" class="text-danger">
+    {{ 'validations.max_length' | translate : { maxLength: control.getError('maxlength').requiredLength } }}
+  </div>
+  <div *ngIf="control.hasError('email')" class="text-danger">
+    {{ 'validations.email' | translate }}
+  </div>
+
+  <div *ngIf="control.hasError('invalidLength')" class="text-danger">
+    {{ 'validations.text_length' | translate : { expectedLength: control.getError('invalidLength').expected } }}
+  </div>
+
+  <div *ngIf="control.hasError('startsWith')" class="text-danger">
+    {{ 'validations.starts_width' | translate : { expectedChars: control.getError('startsWith').expected } }}
+  </div>
+  
+  <div *ngIf="control.hasError('zeroOrLess')" class="text-danger">
+    {{ 'validations.zero_or_less' | translate : { expectedChars: control.getError('zeroOrLess').expected } }}
+  </div>
+
+
+  <div *ngIf="control.hasError('lessThan')" class="text-danger">
+    {{ 'validations.less_than' | translate : { num: control.getError('lessThan').value } }}
+  </div>
+  
+  <div *ngIf="control.hasError('greaterThan')" class="text-danger">
+    {{ 'validations.greater_than' | translate : { num: control.getError('greaterThan').value } }}
+  </div>
+
+  <div *ngIf="control.hasError('rangeError')" class="text-danger">
+    {{ 'validations.range_error' | translate : { min: control.getError('rangeError').min,max:control.getError('rangeError').max } }}
+  </div>
+  
+  <div *ngIf="control.hasError('noSpecialChars')" class="text-danger">
+    {{ 'validations.no_special_chars' | translate }}
+  </div>
+  <div *ngIf="control.hasError('noDigits')" class="text-danger">
+    {{ 'validations.no_digits' | translate }}
+  </div>
+  <div *ngIf="control.hasError('invalidNumberOrDot')" class="text-danger">
+    {{ 'validations.invalid_number_or_dot' | translate }}
+  </div>
+  <div *ngIf="control.hasError('dateRangeInvalid')" class="text-danger">
+    {{ 'validations.date_range_invalid' | translate }}
+  </div>
+  
+
+  <div *ngIf="control.hasError('passwordUppercase')" class="text-danger">
+    {{ 'validations.password_uppercase' | translate }}
+  </div>
+  <div *ngIf="control.hasError('passwordLowercase')" class="text-danger">
+    {{ 'validations.password_lowercase' | translate  }}
+  </div>
+  <div *ngIf="control.hasError('passwordSpaces')" class="text-danger">
+    {{ 'validations.password_spaces' | translate  }}
+  </div>
+  <div *ngIf="control.hasError('passwordSpecialCharacter')" class="text-danger">
+    {{ 'validations.password_special_character' | translate }}
+  </div>
+  <div *ngIf="control.hasError('passwordMinLength')" class="text-danger">
+    {{ 'validations.password_min_length' | translate : { minLength: control.getError('passwordMinLength').requiredLength } }}
+  </div>
+  <div *ngIf="control.hasError('ibanStartsWith')" class="text-danger">
+    {{ 'validations.iban_prefix' | translate : { prefix: control.getError('ibanStartsWith').prefix } }}
+  </div>
+  <div *ngIf="control.hasError('passwordNumber')" class="text-danger">
+    {{ 'validations.password_number' | translate }}
+  </div>
+
+  <div *ngIf="control.hasError('minGreaterThanMax')" class="text-danger">
+    {{ 'validations.min_greater_than_max' | translate  }}
+  </div>
+</div>
+
+<div *ngIf="form && form.errors" class="error-content">
+  <div *ngIf="form.hasError('passwordsNotMatch')" class="text-danger">
+    {{ 'validations.form.password_not_matched' | translate }}
+  </div>
+  <div *ngIf="form.hasError('dateRangeInvalid')" class="text-danger">
+    {{ 'validations.form.date_range_invalid' | translate }}
+  </div>
+
+</div>

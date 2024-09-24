@@ -1,0 +1,97 @@
+{
+  "core": {
+    "project_name": "Stock app",
+    "errors": {
+      "error": "Error!",
+      "err400": "Bad Request.",
+      "err401": "You need to log in to do this action.",
+      "err403": "You don't have permission to access the requested resource.",
+      "err404": "The requested resource does not exist.",
+      "err412": "Precondition Failed.",
+      "err500": "Internal Server Error.",
+      "err503": "The requested service is not available.",
+      "err422": "Validation Error!",
+      "errUnknown": "Something went wrong!"
+    },
+    "successes": {
+      "success": "Success",
+      "added": "Added Successfully",
+      "deleted": "Deleted Successfully",
+      "updated": "Updated Successfully",
+      "operation_accomplished": "Action completed successfully"
+    }
+  },
+  "auth": {
+    "welcome_to": "Welcome to",
+    "login": {
+      "title": "Login",
+      "submit": "Login",
+      "password": "Password",
+      "email":"Email"
+    }
+  },
+  "main": {
+    "navigation": {
+      "dashboard": "Dashboard",
+      "item1": "Item 1",
+      "item2": "Item 2",
+      "item3": "item 3"
+    },
+    "settings": {
+      "username": "Username",
+      "language": "language",
+      "email": "E-mail",
+      "mobile_number": "Mobile number",
+      "change_password": "Change password",
+      "profile": "Profile",
+      "logout": "Sign out",
+      "logout_desc": "Are you sure you want to Sign out?",
+      "settings": "Settings"
+    },
+    "dashboard":{
+      "realtime_stocks":"Realtime stocks",
+      "mock_stocks":"Mock stocks"
+    }
+  },
+  "validations": {
+    "required": "This field is required.",
+    "email": "Invalid email format."
+  },
+  "error_404": {
+    "title": "The page you were looking for is not found!",
+    "description": "You may have mistyped the address or the page may have moved.",
+    "button": "Back to Home"
+  },
+  "error_forbidden": {
+    "forbidden": "Forbidden!",
+    "title": "You do not have the permission to access this page",
+    "description": "You may have mistyped the address or the page may have moved.",
+    "button": "Back to Home"
+  },
+  "stock_card":{
+    "daily":"Daily",
+    "week_52":"Week 52"
+  },
+  "general": {
+    "on":"on",
+    "off":"off",
+    "please_wait":"Please wait...",
+    "copyrights": "©{{year}} All Rights Reserved",
+    "processing": "Processing...",
+    "cancel": "Cancel",
+    "close": "Close",
+    "proceed": "Proceed",
+    "open_menu": "Open menu",
+    "close_menu": "Close Menu",
+    "close_modal": "Close",
+    "yes": "Yes",
+    "no": "No",
+    "edit": "Edit",
+    "submit": "Submit",
+    "reset": "Reset",
+    "show": "Show",
+    "ok": "Ok",
+    "add": "Add",
+    "send": "Send"
+  }
+}

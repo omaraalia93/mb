@@ -1,0 +1,35 @@
+<app-my-modal [size]="size">
+    <ng-container body>
+        <div class="action-modal-container" [class]="state">
+            <div class="state-icon" *ngIf="state">
+                <span class="icon" [innerHTML]="state | actionModalIcons | safe:'html'"></span>
+            </div>
+            <div class="action-modal-title">
+                {{ title | translate }}
+            </div>
+            <div class="action-modal-desc">
+                {{ desc | translate }}
+                <ng-content></ng-content>
+            </div>
+        </div>
+        
+    </ng-container>
+
+    <ng-container footer>
+        <button 
+            *ngIf="type ==='confirm'"
+            type="button" 
+            class="btn btn-outline-primary text-light"
+            (click)="onClose()">
+            {{ closeBtnName | translate }}
+        </button>
+        
+        <button 
+            type="button" 
+            class="btn btn-primary text-light"
+            (click)="onSubmit()">
+            {{ submitBtnName | translate }}
+        </button>
+    </ng-container>
+
+</app-my-modal>
