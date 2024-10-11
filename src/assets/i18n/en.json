@@ -46,7 +46,8 @@
       "profile": "Profile",
       "logout": "Sign out",
       "logout_desc": "Are you sure you want to Sign out?",
-      "settings": "Settings"
+      "settings": "Settings",
+      "notifications":"Notifications"
     },
     "dashboard":{
       "realtime_stocks":"Realtime stocks",
